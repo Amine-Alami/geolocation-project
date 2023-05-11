@@ -27,7 +27,7 @@
 <body onload="init()">
 
 <div class="w3-container">
-    <h2 style="text-align: center"><spring:message code="page.city.title"/></h2>
+    <h2 style="text-align: center"><spring:message code="page.customers.title"/></h2>
     <br>
     <a class="w3-button" href="<c:url value="/" />"><spring:message code="application.back"/></a>
 
@@ -42,11 +42,13 @@
             </tr>
             </thead>
             <tbody>
-            <c:forEach items="${cities}" var="elem">
+            <c:forEach items="${costomers}" var="elem">
                 <tr>
-                    <th scope="row">${elem.id}</th>
-                    <td>${elem.city}</td>
-                    <td>${elem.country.country}</td>
+                    <th scope="row">${elem.firstName}</th>
+                    <td>${elem.lastName}</td>
+                    <td>${elem.email}</td>
+                    <td>${elem.active}</td>
+                    <td>${elem.adresse}</td>
                 </tr>
             </c:forEach>
             </tbody>

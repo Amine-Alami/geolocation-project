@@ -16,6 +16,8 @@
     <h2>
         <a href="countries"><spring:message code="application.countries"/></a>
         <a href="cities"><spring:message code="application.cities"/></a>
+        <a href="customer"><spring:message code="application.customer"/></a>
+        <a href="customers"><spring:message code="application.customers"/></a>
     </h2>
 </div>
 </body>
