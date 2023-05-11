@@ -46,19 +46,14 @@
             </tr>
             </thead>
             <tbody>
-            <c:forEach items="${customers}" var="customer">--%>
                 <tr>
                     <td>${customer.id}</td>
                     <td>${customer.prenom}</td>
                     <td>${customer.email}</td>
                     <td>${customer.active}</td>
-                   <td>${customer.ville}</td>
-                    <td>${customer.pays}</td>
-
-
-
+                    <td>${customer.address.city}</td>
+                    <td>${customer.address.city.country}</td>
                 </tr>
-            </c:forEach>
             </tbody>
         </table>
         <div id="map"></div>

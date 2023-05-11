@@ -31,8 +31,8 @@ public class CustomerController {
     public ModelAndView getCountry(@PathVariable Long customerId) {
         Customer customer = service.read(customerId);
         ModelAndView view = new ModelAndView();
-        view.addObject("customer", customer); // Pass the clicked customer ID to the view
-        view.setViewName("redirect:/customer/" + customerId); // Redirect to the customer page
+        view.addObject("customer", customer);
+        view.setViewName("redirect:/customer/" + customerId);
         return view;
     }
 }
