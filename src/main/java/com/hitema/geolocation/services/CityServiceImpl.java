@@ -12,7 +12,7 @@ import java.util.List;
 public class CityServiceImpl implements CityService{
 
     private static final Logger log = LoggerFactory.getLogger(CityServiceImpl.class);
-    private CityRepository repository;
+    private final CityRepository repository;
 
     public CityServiceImpl(CityRepository repository) {
         this.repository = repository;
