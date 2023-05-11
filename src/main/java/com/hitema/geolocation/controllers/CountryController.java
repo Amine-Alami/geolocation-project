@@ -21,7 +21,7 @@ public class CountryController {
 
 	private static final Logger log = LogManager.getLogger(CountryController.class);
 
-	private CountryService service;
+	private final CountryService service;
 
 	public CountryController(CountryService service) {
 		this.service = service;

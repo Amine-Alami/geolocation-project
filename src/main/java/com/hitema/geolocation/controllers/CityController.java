@@ -11,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class CityController {
     private static final Logger log = LoggerFactory.getLogger(CityController.class);
 
-    private CityService service;
+    private final CityService service;
 
     public CityController(CityService service) {
         this.service = service;

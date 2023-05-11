@@ -11,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class CustomerController {
     private static final Logger log = LoggerFactory.getLogger(CustomerController.class);
 
-    private CustomerService service;
+    private final CustomerService service;
 
     public CustomerController(CustomerService service) {
         this.service = service;
@@ -19,10 +19,15 @@ public class CustomerController {
 
     @GetMapping("/customers")
     public ModelAndView getAll(){
-        log.trace("Customers Get All called ...");
+        log.trace("Getting All Customers called ...");
         var view = new ModelAndView();
         view.addObject("mmsg","autres attribut");
         view.addObject("customers",service.readAll());
         return view;
     }
+
+    /*@GetMapping("/customers/{customerId}")
+    public ModelAndView getCountry() {
+
+    }*/
 }

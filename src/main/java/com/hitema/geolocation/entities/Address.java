@@ -15,6 +15,7 @@ public class Address {
     private String district;
     @Column(name = "postal_code")
     private String postalCode;
+    @Column(name = "location", columnDefinition = "geometry")
     private Geometry location;
 
     @OneToOne
