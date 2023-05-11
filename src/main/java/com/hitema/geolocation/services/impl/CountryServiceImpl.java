@@ -1,7 +1,8 @@
-package com.hitema.geolocation.services;
+package com.hitema.geolocation.services.impl;
 
 import com.hitema.geolocation.entities.Country;
 import com.hitema.geolocation.repositories.CountryRepository;
+import com.hitema.geolocation.services.CountryService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -10,7 +11,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
-public class CountryServiceImpl implements CountryService{
+public class CountryServiceImpl implements CountryService {
 
     private final CountryRepository repository;
 

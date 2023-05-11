@@ -1,7 +1,8 @@
-package com.hitema.geolocation.services;
+package com.hitema.geolocation.services.impl;
 
 import com.hitema.geolocation.entities.City;
 import com.hitema.geolocation.repositories.CityRepository;
+import com.hitema.geolocation.services.CityService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -9,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class CityServiceImpl implements CityService{
+public class CityServiceImpl implements CityService {
 
     private static final Logger log = LoggerFactory.getLogger(CityServiceImpl.class);
     private final CityRepository repository;
