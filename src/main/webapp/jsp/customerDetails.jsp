@@ -32,7 +32,7 @@
     <a class="w3-button" href="<c:url value="/" />"><spring:message code="application.back"/></a>
 
     <div class="w3-container w3-center">
-        <a class="w3-button" href="<c:url value="/" />"><spring:message code="application.new"/></a>
+
         <table id="appTable" class="display w3-centered w3-table-all">
             <thead>
             <tr>
@@ -46,26 +46,19 @@
             </tr>
             </thead>
             <tbody>
-<%--            <c:forEach items="${customers}" var="customer">--%>
+            <c:forEach items="${customers}" var="customer">--%>
                 <tr>
-<%--                    <td>${customer.id}</td>--%>
-<%--                    <td>${customer.nom}</td>--%>
-<%--                    <td>${customer.prenom}</td>--%>
-<%--                    <td>${customer.email}</td>--%>
-<%--                    <td>${customer.active}</td>--%>
-<%--                    <td>${customer.ville}</td>--%>
-<%--                    <td>${customer.pays}</td>--%>
+                    <td>${customer.id}</td>
+                    <td>${customer.prenom}</td>
+                    <td>${customer.email}</td>
+                    <td>${customer.active}</td>
+                   <td>${customer.ville}</td>
+                    <td>${customer.pays}</td>
 
-                    <td>2</td>
-                    <td>Garoiaz</td>
-                    <td>Radouane</td>
-                    <td>garoaiz.radouane@gg.gg</td>
-                    <td>True</td>
-                    <td>Paris</td>
-                    <td>France</td>
+
 
                 </tr>
-<%--            </c:forEach>--%>
+            </c:forEach>
             </tbody>
         </table>
         <div id="map"></div>
@@ -75,19 +68,19 @@
     function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 8,
-            <%--center: {lat: ${users[0].latitude}, lng: ${users[0].longitude}}--%>
-            center: {lat: 48.856614, lng: 2.3522219}
+            center: {lat: ${customers[0].latitude}, lng: ${customers[0].longitude}}
+
         });
-<%--        <c:forEach var="user" items="${users}">--%>
+        <c:forEach var="customer" items="${customers}">
 
         var marker = new google.maps.Marker({
-            <%--position: {lat: ${user.latitude}, lng: ${user.longitude}},--%>
-            position: {lat: 48.856614, lng: 2.3522219},
+            position: {lat: ${customer.latitude}, lng: ${customer.longitude}},
+
             map: map,
-            <%--title: '${user.ville}'--%>
-            title: 'Paris'
+            title: '${customer.ville}'
+
         });
-<%--        </c:forEach>--%>
+        </c:forEach>
     }
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0v_BXwGv-2-CZTMR_g371WtJy9JoWkPA&callback=initMap"></script>
